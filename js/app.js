@@ -735,13 +735,11 @@ const Testimonials = {
 
         const card = this.cards[this.current];
 
-        card.scrollIntoView({
+        this.container.scrollTo({
 
-            behavior: "smooth",
+            left: card.offsetLeft,
 
-            inline: "center",
-
-            block: "nearest"
+            behavior: "smooth"
 
         });
 
@@ -766,7 +764,7 @@ const FestivalSlider = {
 
         this.index = 0;
 
-        this.auto();
+        //this.start();
 
     },
 
@@ -782,11 +780,11 @@ const FestivalSlider = {
 
             }
 
-            this.cards[this.index].scrollIntoView({
+            this.track.scrollTo({
 
-                behavior: "smooth",
+            left: this.cards[this.index].offsetLeft,
 
-                inline: "center"
+            behavior: "smooth"
 
             });
 
